@@ -1,0 +1,66 @@
+:root {
+	--container-padding: 30px;
+
+	--body-font-family: 'Roboto', sans-serif;
+	--body-font-size: 16px;
+	--body-color: #333;
+	--body-lh: 1.6;
+
+	--pr: #FF7A42;
+	--pr-hover: #EB662E;
+	
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	font-family: var(--body-font-family);
+	font-size: var(--body-font-size);
+	color: var(--body-color);
+	line-height: var(--body-lh);
+	min-height: 1000px;
+	padding-bottom: 200px;
+}
+a {
+	text-decoration: none;
+}
+
+svg {
+	
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.hide {
+	display: none !important;
+}
+
+
+.container {
+	/* - Зробити весь контент сайту по середині */
+	max-width: 1160px;
+	margin-left: auto;
+	margin-right: auto;
+
+	/* НА телефонах щоб контент не прилипав до сторін */
+	padding: 0 var(--container-padding);
+}
+
+.no-result {
+	text-align: center;
+	padding: 20px 0;
+}
+.no-result .no-result__img {
+	max-width: 70px;
+}
+.no-result .no-result__title {
+	font-size: 18px;
+	color: #000;
+}

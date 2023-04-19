@@ -1,0 +1,62 @@
+.page-login {
+	background:#2148C0;
+	background-image: url("../img/Ellipse.png"), url("../img/Vector.png");
+	background-repeat: no-repeat, no-repeat, no-repeat;
+	background-position: bottom left,top right;
+	background-size: 250px, 800px, 350px, 420px;
+}
+
+/**
+ * Стилі до форм сайту
+ */
+
+.page-login .form-login .form-control {
+	background: rgba(255, 255, 255, 0.08);
+	padding-left: 51px;
+    outline: none;
+	border: 1px solid #FFFFFF;
+	border-radius: 8px;
+	min-width: 300px;
+	min-height: 45px;
+	cursor: auto;
+	color: #fff;
+}
+.page-login .form-login .input-icon{
+	left: 12px;
+}
+.page-login .form-control::placeholder {
+	color: #fff;
+	opacity: 2;
+
+}
+.page-login .form-control:focus {
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
+} 
+.page-login .form-login .cart-img{
+	padding-bottom: 55px;
+}
+
+/**
+ * Стилі кнопок
+ */
+
+.page-login .form-login .btn {
+	--bs-btn-color: #000;
+	--bs-btn-font-size: 14px;
+	--bs-btn-hover-bg: #e6e6ef;
+	--bs-btn-hover-color: #1212d9;
+	color: #1212d9;
+	margin-top: 20px;
+}
+.page-login .form-login .parol {
+	--bs-btn-hover-bg: #2929cdd9;
+	--bs-btn-hover-color: #2929cdd9;
+	color: #fff;
+	text-decoration: none;
+	border: none;
+	outline: none;
+	margin-top: 10px;
+} 
+.page-login .btn:focus {
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
+}

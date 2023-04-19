@@ -21,8 +21,6 @@ body {
 	font-size: var(--body-font-size);
 	color: var(--body-color);
 	line-height: var(--body-lh);
-	min-height: 1000px;
-	padding-bottom: 200px;
 }
 a {
 	text-decoration: none;
@@ -42,16 +40,6 @@ ul {
 	display: none !important;
 }
 
-
-.container {
-	/* - Зробити весь контент сайту по середині */
-	max-width: 1160px;
-	margin-left: auto;
-	margin-right: auto;
-
-	/* НА телефонах щоб контент не прилипав до сторін */
-	padding: 0 var(--container-padding);
-}
 
 .no-result {
 	text-align: center;

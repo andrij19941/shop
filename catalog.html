@@ -11,22 +11,31 @@
 
 <body>
 
-	<nav class="menu">
-		<a href="index.html">Головна</a>
-		<a href="checkout.html">Оформлення замовлення</a>
-	</nav>
+	<div class="menu bg-body-secondary bg-gradient">
+		<div class="container">
+			<header class="d-flex justify-content-center py-3">
+				<ul class="nav nav-pills">
+					<li class="nav-item"><a href="index.html" class="nav-link">Авторизація</a></li>
+					<li class="nav-item"><a href="catalog.html" class="nav-link active">Каталог</a></li>
+					<li class="nav-item"><a href="product.html" class="nav-link">Перегляд товару</a></li>
+					<li class="nav-item"><a href="checkout.html" class="nav-link">Оформлення замовлення</a></li>
+					<li class="nav-item"><a href="contacts.html" class="nav-link">Контакти</a></li>
+				</ul>
+			</header>
+		</div>
+	</div>
 
 	<div class="catalog">
 		<div class="container">
 			<h1 class="catalog__title">Каталог товарів</h1>
-			<div class="catalog__list">
+			<div class="catalog__list js-catalog-list">
 
 				<div class="card-product radius-4-px">
 					<img class="img" alt="" src="img/1.jpg">
 					<p class="title">Ресторан 1</p>
 					<p class="info-text">Склад,ангари,офіс,магазин,нічний клуб,фастфуд,ресторан</p>
 					<p class="price"><span class="big font-bold">990</span> грн</span></p>
-					<div class="button-buy js-add-product" data-title="Ресторан 1" data-price="990" data-img="1.jpg">Замовити</div>
+					<div class="btn btn-primary w-100 js-add-product" data-title="Ресторан 1" data-price="990" data-img="1.jpg">Замовити</div>
 				</div>
 
 				<div class="card-product radius-4-px">
@@ -34,7 +43,7 @@
 					<p class="title">Ресторан 2</p>
 					<p class="info-text">Склад,ангари,офіс,магазин,нічний клуб,фастфуд,ресторан</p>
 					<p class="price"><span class="big font-bold">1200</span> грн</p>
-					<div class="button-buy js-add-product" data-title="Ресторан 2" data-price="1200" data-img="2.jpg">Замовити</div>
+					<div class="btn btn-primary w-100 js-add-product" data-title="Ресторан 2" data-price="1200" data-img="2.jpg">Замовити</div>
 				</div>
 			</div>
 		</div>
@@ -55,6 +64,7 @@
 
 	<script src="js/jquery-3.6.4.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+	<script src="js/catalog.js"></script>
 	<script src="js/cart.js"></script>
 	<script src="js/checkout.js"></script>
 </body>

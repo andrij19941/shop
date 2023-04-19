@@ -240,16 +240,3 @@
 
 @media (max-width: 480px) {}
 
-
-.notify.add-numb::before{
-	opacity: 1;
-
-}
-
-
-.container .notify::before{
-
-	content: attr(data-count);
-
-
-	}

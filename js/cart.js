@@ -89,8 +89,8 @@ viewProducts();
 /**
  * Добавлення товару в корзину
  */
-$('.js-add-product').click(function()
-{	
+$(document).on('click', '.js-add-product', function(event)
+{
 	// Дістаємо кнопку на яку нажали
 	const btn = $(this);
 

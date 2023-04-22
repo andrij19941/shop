@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>@@title</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap" rel="stylesheet">
+	    
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="@@bodyClass">
+<div class="menu bg-body-secondary bg-gradient">
+	<div class="container">
+		<header class="d-flex justify-content-center py-3">
+			<ul class="nav nav-pills">
+				<li class="nav-item"><a href="index.html" class="nav-link">Авторизація</a></li>
+				<li class="nav-item"><a href="catalog.html" class="nav-link active">Каталог</a></li>
+				<li class="nav-item"><a href="product.html" class="nav-link">Перегляд товару</a></li>
+				<li class="nav-item"><a href="checkout.html" class="nav-link">Оформлення замовлення</a></li>
+				<li class="nav-item"><a href="contacts.html" class="nav-link">Контакти</a></li>
+			</ul>
+		</header>
+	</div>
+</div>
+  
+<div class="container">
+    <div class="product-list">
+        <div class="product-list_cart">
+          <a href="#">
+            <img src="" alt="Продукт 1">
+            <h2>Продукт 1</h2>
+            <p>Ціна: $100</p>
+          </a>
+        </div>
+        <div class="product-list_cart">
+          <a href="#">
+            <img src="" alt="Продукт 2">
+            <h2>Продукт 2</h2>
+            <p>Ціна: $200</p>
+          </a>
+        </div>
+    </div>
+
+        <script src="js/jquery-3.6.4.min.js"></script>
+	<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+	<script src="js/catalog.js"></script>
+	<script src="js/cart.js"></script>
+	<script src="js/checkout.js"></script>
+</body>
+
+</html>

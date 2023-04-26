@@ -6,7 +6,7 @@ function viewOrderProducts()
 
 	// Кількість товарів 
 	let cartCount = cart.length;
-
+	
 	// Якщо немає товарів
 	if(cartCount != 0) {
 		

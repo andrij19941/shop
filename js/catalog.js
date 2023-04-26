@@ -11,7 +11,7 @@ function getCatalog () {
 
 			// Виводимо добавлені товари
 			$.each(catalogView, function(index, product) {
-				console.log("product", product);
+				// console.log("product", product);
 
 
 				// Наповнюємо змінну товарами

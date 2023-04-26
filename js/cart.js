@@ -18,7 +18,7 @@ function saveCart() {
 function getCart() {
 	let cartList = localStorage.getItem(cartKey);
 	cartList = JSON.parse(cartList);
-	return cartList;
+	return (Array.isArray(cartList)) ? cartList : [];
 }
 
 // Вивід товарів у корзину 
@@ -26,10 +26,14 @@ function viewProducts()
 {
 	// Змінна яка відповідає за список добавлених товарів, які ми будемо виводити
 	let listProducts = '';
+	
+	// Перевіряємо чи є в нас масив з корзиною
+	if(!Array.isArray(cart))
+		return false;
 
 	// Кількість товарів 
 	let cartCount = cart.length;
-
+	
 	// Якщо немає товарів
 	if(cartCount == 0) {
 

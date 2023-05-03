@@ -5,6 +5,7 @@ var less = require('gulp-less');
 var concat = require('gulp-concat');
 const minify = require('gulp-minify');
 const fileinclude = require('gulp-file-include');
+const sass = require('gulp-sass')(require('sass'));
 
 
 
@@ -45,6 +46,7 @@ gulp.task('img', function() {
   return gulp.src(['img/*.*'])
     .pipe(gulp.dest('dist/img'));
 });
+
 
 gulp.task('watch', function() {
   gulp.watch('*.html', gulp.series('html'));

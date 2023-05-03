@@ -11,6 +11,8 @@
     "jquery": "^3.6.4"
   },
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.62.1"
   }
 }

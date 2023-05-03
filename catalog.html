@@ -1,34 +1,19 @@
-@@include('html/system--head.html', {
+@@include('blocks/system--head.html', {
 	'title': 'Catalog page',
 	'bodyClass': 'page-catalog'
 })
 
-	@@include('html/block--menu.html')
+	@@include('blocks/block--menu.html')
 
 	<div class="catalog">
 		<div class="container">
 			<h1 class="catalog__title">Каталог товарів</h1>
 			<div class="catalog__list js-catalog-list">
 
-				<div class="card-product radius-4-px">
-					<img class="img" alt="" src="/shop/img/1.jpg">
-					<p class="title">Ресторан 1</p>
-					<p class="info-text">Склад,ангари,офіс,магазин,нічний клуб,фастфуд,ресторан</p>
-					<p class="price"><span class="big font-bold">990</span> грн</span></p>
-					<div class="btn btn-primary w-100 js-add-product" data-title="Ресторан 1" data-price="990" data-img="1.jpg">Замовити</div>
-				</div>
-
-				<div class="card-product radius-4-px">
-					<img class="img" alt="" src="img/2.jpg">
-					<p class="title">Ресторан 2</p>
-					<p class="info-text">Склад,ангари,офіс,магазин,нічний клуб,фастфуд,ресторан</p>
-					<p class="price"><span class="big font-bold">1200</span> грн</p>
-					<div class="btn btn-primary w-100 js-add-product" data-title="Ресторан 2" data-price="1200" data-img="2.jpg">Замовити</div>
-				</div>
 			</div>
 		</div>
 	</div>
 
-	@@include('html/cart--list.html')
-@@include('html/system--footer.html')
+	@@include('blocks/cart--list.html')
+@@include('blocks/system--footer.html')
 

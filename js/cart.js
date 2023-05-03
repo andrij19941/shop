@@ -66,9 +66,9 @@ function viewProducts()
 								<h3 class="cart-product__title">${product.title}</h3>
 								<p class="cart-product__price">${product.price}</p>
 								<div class="button-count">
-							        <button class="button-count__btn button-count__btn-count" data-for="#input-count-${index}" data-type="minus">-</button>
+							        <button class="button-count__btn button-count__btn-count js-btn-count" data-for="#input-count-${index}" data-type="minus">-</button>
 							        <input type="text" value="1" class="button-count__input" id="input-count-${index}"/>
-							        <button class="button-count__btn button-count__btn-count" data-for="#input-count-${index}" data-type="plus">+</button>
+							        <button class="button-count__btn button-count__btn-count js-btn-count" data-for="#input-count-${index}" data-type="plus">+</button>
     							</div>
 								<div class="btn btn-remove js-remove-product" data-index="${index}">x</div>
 							</li>`;
@@ -198,7 +198,7 @@ if (!Array.prototype.isAloowAddProduct) {
 
 
 // Вішаємо подію кліку на кнопку плюс.
-$(document).on('click', '.button-count__btn-count', function()
+$(document).on('click', '.js-btn-count', function()
 {
 	// Дістаємо тип кнопки
 	const typeBtn = $(this).data('type');

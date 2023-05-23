@@ -15,7 +15,7 @@ function viewOrderProducts()
 			
 			// Наповнюємо змінну товарами
 			listProducts += `<div class="card-order-product">
-				        		<img src="img/${product.img}" alt="" class="card-order-product__img">
+				        		<img src="${product.img}" alt="" class="card-order-product__img">
 				        		<h4 class="card-order-product__title">${product.title}</h4>
 				        		<p class="card-order-product__price">
 				        			<span class="card-order-product__price-label">Ціна:</span>

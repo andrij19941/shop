@@ -44,11 +44,25 @@ ul {
 .no-result {
 	text-align: center;
 	padding: 20px 0;
+	font-size: 18px;
+	color: #000;
 }
 .no-result .no-result__img {
 	max-width: 70px;
 }
-.no-result .no-result__title {
-	font-size: 18px;
-	color: #000;
+
+
+
+.input-search {
+	min-height: 50px;
+    padding: 16px 20px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.max-width {
+	max-width: 700px;
+	border-radius: 10px solid 1px;
+
 }

@@ -1,43 +1,44 @@
 @@include('blocks/system--head.html')
-<body class="bg-primary text-white">
-	<div class="contacts">
+<div class="contacts">
+	@@include('blocks/block--menu.html')
 
-		@@include('blocks/block--menu.html')
-
-		<div class="container ">
-			<h1 class="mb-5">Контакти</h1>
-			<div class="row">
-				<div class="col-md-6">
-					<h2>Наша адреса</h2>
-					<div class="address">
-						<ul class="list-unstyled">
-							<li>вул. Хрещатик, 10</li>
-							<li>м. Київ, 01001</li>
-							<li>Україна</li>
-						</ul>
-					</div>
-				</div>
-				<h2>Контактна інформація</h2>
-				<div>
+	<div class="container">
+		<h1 class="mb-5">Контакти</h1>
+		<div class="row">
+			<div class="col-md-6">
+				<h2>Наша адреса</h2>
+				<div class="address">
 					<ul class="list-unstyled">
-					  <li>Телефон: +38 (044) 123-45-67</li>
-					  <li>Email: info@mymarket.com</li>
+						<li>вул. Хрещатик, 10</li>
+						<li>м. Київ, 01001</li>
+						<li>Україна</li>
 					</ul>
 				</div>
-				<div class="col-md-6">
-					<h2>Напишіть нам</h2>
-					<form>
-						<div class="mb-3">
-							<input for="name" class="form-control form-control-lg" placeholder="Імя">
-						</div>
-						<div>
-							<button class="btn btn-primary">Відправити</button>
-						</div>
-					</form>
-				</div>
-			</div>	
-		</div>	
-    </div>
+			</div>
+			<h2>Контактна інформація</h2>
+			<div>
+				<ul class="list-unstyled">
+					<li>Телефон: +38 (044) 123-45-67</li>
+					<li>Email: info@mymarket.com</li>
+				</ul>
+			</div>
+			<div class="col-md-6">
+				<h2 class="js-viewtext">Напишіть нам</h2>
 
+				<form class="js-send-form" onsubmit="sendForm(event)">
+					<div class="mb-3">
+						<input name="user-name" class="form-control form-control-lg js-input-name" placeholder="Імя" />
+					</div>
+					<div class="mb-3">
+						<input name="user-email" class="form-control form-control-lg js-input-email" placeholder="Email" />
+					</div>
+					<div>
+						<button class="btn btn-primary">Відправити</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
 
-@@include('blocks/system--footer.html')
+@@include('blocks/block--footer.html') @@include('blocks/system--footer.html')

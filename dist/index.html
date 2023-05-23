@@ -15,26 +15,44 @@
 </head>
 
 <body class="h-100 text-center d-flex justify-content-center align-items-center page-login">
+
+<form class="form-login" action="catalog.html" method="post">
+	<img src="img/cart.png" alt="" class="cart-img" />
+	<div class="input-hold mb-3 position-relative">
+		<img src="img/user.png" alt="" class="input-icon position-absolute top-50 translate-middle-y" />
+		<input type="text" class="form-control placeholder" id="exampleFormControlInput1" placeholder="Логін" value="user@gmail.com" />
+	</div>
+	<div class="input-hold mb-3 position-relative">
+		<img src="img/lock.png" alt="" class="input-icon position-absolute top-50 translate-middle-y" />
+		<input type="password" class="form-control placeholder" id="exampleFormControlInput1" placeholder="Пароль" value="user" />
+	</div>
+	<div class="btn-hold">
+		<a href="catalog.html" class="btn btn-light w-100 btn-lg">Авторизуватися</a>
+	</div>
+	<div class="btn-hold text-end">
+		<a href="#" class="parol btn">Забули пароль?</a>
+	</div>
+</form>
+
+<script>
+	const param = {
+		page: 'login'
+	}
+
+
+</script>	
 	
-	<form class='form-login' action="catalog.html" method="post">
-		<img src="img/cart.png" alt="" class="cart-img">
-		<div class="input-hold mb-3 position-relative">
-			<img src="img/user.png" alt="" class="input-icon position-absolute top-50 translate-middle-y ">
-			<input type="text" class="form-control placeholder " id="exampleFormControlInput1" placeholder="Логін" value="user@gmail.com">
-		</div>		
-		<div class="input-hold mb-3 position-relative">
-			<img src="img/lock.png" alt="" class="input-icon position-absolute top-50 translate-middle-y ">
-			<input type="password" class="form-control placeholder" id="exampleFormControlInput1" placeholder="Пароль" value="user">
-		</div>		
-		<div class="btn-hold">
-			<a href="catalog.html" class="btn btn-light w-100 btn-lg">Авторизуватися </a>
-		</div>
-		<div class="btn-hold text-end">
-			<a href="#" class="parol btn">Забули пароль?</a>
-		</div>
-	</form>
 	
-	<script src="js/all-min.js"></script>
+	
+	<!-- /<script src="js/all-min.js"></script> -->
+	<script src="../libs/jquery/jquery.min.js"></script>
+	<script src="../libs/boostrap/bootstrap.bundle.min.js"></script>
+	<script src="../js/catalog.js"></script>
+	<script src="../js/product.js"></script>
+	<script src="../js/cart.js"></script>
+	<script src="../js/checkout.js"></script>
+	<script src="../js/search.js"></script>
+	<script src="../js/sendForm.js"></script>
 </body>
 
 </html>

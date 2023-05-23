@@ -22,7 +22,6 @@ gulp.task('libs', function() {
     .pipe(gulp.dest('dist/libs/'))
 });
 
-
 gulp.task('scss', function() {
   return gulp.src(['scss/styles.scss'])
   .pipe(sass().on('error', sass.logError))
@@ -30,20 +29,20 @@ gulp.task('scss', function() {
   .pipe(gulp.dest('dist/css/'));
 });
 
-gulp.task('js', function() {
-  return gulp.src([
-    'js/jquery-3.6.4.min.js',
-    'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
-    'js/catalog.js',
-    'js/cart.js',
-    'js/checkout.js'
-  ])
-    .pipe(sourcemaps.init())
-    .pipe(concat('all.js'))
-    .pipe(sourcemaps.write())
-    .pipe(minify())
-    .pipe(gulp.dest('dist/js/'));
-});
+// gulp.task('js', function() {
+//   return gulp.src([
+//     'libs/jquery/jquery.min.js',
+//     'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
+//     'js/catalog.js',
+//     'js/cart.js',
+//     'js/checkout.js'
+//   ])
+//     .pipe(sourcemaps.init())
+//     .pipe(concat('all.js'))
+//     .pipe(sourcemaps.write())
+//     .pipe(minify())
+//     .pipe(gulp.dest('dist/js/'));
+// });
 
 gulp.task('img', function() {
   return gulp.src(['img/*.*'])
@@ -55,9 +54,9 @@ gulp.task('watch', function() {
   gulp.watch('*.html', gulp.series('html'));
   gulp.watch('blocks/*.html', gulp.series('html'));
   gulp.watch('scss/*.scss', gulp.series('scss'));
-  gulp.watch('js/*.js', gulp.series('js'));
+  // gulp.watch('js/*.js', gulp.series('js'));
   gulp.watch('img/*.*', gulp.series('img'));
   gulp.watch('libs/**/*.*', gulp.series('libs'));
 });
 
-exports.default = gulp.series( gulp.parallel('html', 'scss', 'js', 'img', 'libs'), 'watch');
+exports.default = gulp.series( gulp.parallel('html', 'scss', 'img', 'libs'), 'watch');

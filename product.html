@@ -1,25 +1,45 @@
-@@include('blocks/system--head.html', {
-	'title': 'Product page',
-	'bodyClass': 'page-product'
-})
+@@include('blocks/system--head.html', { 'title': 'Product page', 'bodyClass': 'page-product' }) @@include('blocks/block--menu.html', { 'activePage': 'product'})
 
-	@@include('blocks/block--menu.html')
-
-	<div class="product-detail">
-    <div class="container my-5">
-      <div class="row">
-        <div class="col-md-6">
-          <img src="img/2.jpg" alt="Фото товару" class="img-fluid">
-        </div>
-        <div class="col-md-6">
-          <h1 class="mb-3">Назва товару</h1>
-          <p class="lead mb-4">Опис товару</p>
-          <p class="h2 text-danger mb-4">Ціна: $100</p>
-          <button class="btn btn-primary btn-lg">Додати в корзину</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-@@include('blocks/system--footer.html')
-
+<div class="container my-5">
+	<div class="row">
+		<div class="col-md-6">
+			<div id="carouselImages" class="carousel slide">
+				<div class="carousel-inner js-product-gallery"></div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselImages" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselImages" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<h1 class="mb-3 js-product-title">Назва товару</h1>
+			<div class="rating-wrap">
+				<span class="js-product-rating">4.9</span>
+				<a href="#" class="">1580</a>
+				<p class="lead mb-4 fw-bold">Опис товару</p>
+				<p class="perex-for-desktop js-product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, repellat!</p>
+				<div class="article fw-bold">
+					Артикул:
+					<span>122890</span>
+				</div>
+				<p class="h2 text-danger mb-4">
+					Ціна:
+					<span class="js-product-price"></span>
+					<span class="h2 text-danger mb-4">дол</span>
+				</p>
+				<div class="js-product-order-btn">
+					<button class="btn btn-primary btn-lg">Додати в корзину</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="depiction">
+		<h1 class="depiction-title fw-bold">Опис</h1>
+		<p class="depiction-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti maxime eligendi fuga odio laudantium aperiam architecto deserunt suscipit distinctio! Atque itaque blanditiis quis vel nemo numquam quibusdam alias necessitatibus fugiat.</p>
+	</div>
+	@@include('blocks/cart--list.html') @@include('blocks/block--footer.html') @@include('blocks/system--footer.html', { page: 'product' })
+</div>

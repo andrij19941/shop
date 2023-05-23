@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Product page</title>
+	<title>Search page</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,64 +14,37 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body class="page-product"> <div class="menu bg-body-secondary bg-gradient">
+<body class="page-search"> <div class="menu bg-body-secondary bg-gradient">
 	<div class="container">
 		<header class="d-flex justify-content-center py-3">
 			<ul class="nav nav-pills">
 				<li class="nav-item"><a href="index.html" class="nav-link">Авторизація</a></li>
 				<li class="nav-item"><a href="catalog.html" class="nav-link ">Каталог</a></li>
-				<li class="nav-item"><a href="product.html?id=1" class="nav-link  active ">Перегляд товару</a></li>
+				<li class="nav-item"><a href="product.html?id=1" class="nav-link ">Перегляд товару</a></li>
 				<li class="nav-item"><a href="checkout.html" class="nav-link ">Оформлення замовлення</a></li>
 				<li class="nav-item"><a href="contacts.html" class="nav-link ">Контакти</a></li>
-				<li class="nav-item"><a href="search.html" class="nav-link ">Пошук</a></li>
+				<li class="nav-item"><a href="search.html" class="nav-link  active ">Пошук</a></li>
 			</ul>
 		</header>
 	</div>
 </div>
 
 
-<div class="container my-5">
-	<div class="row">
-		<div class="col-md-6">
-			<div id="carouselImages" class="carousel slide">
-				<div class="carousel-inner js-product-gallery"></div>
-				<button class="carousel-control-prev" type="button" data-bs-target="#carouselImages" data-bs-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Previous</span>
-				</button>
-				<button class="carousel-control-next" type="button" data-bs-target="#carouselImages" data-bs-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Next</span>
-				</button>
-			</div>
+<div class="search">
+	<div class="container">
+		<h1 class="search__title mt-3 mb-3">Пошук товарів</h1>
+		<div class="d-flex" role="search">
+			<input name="query" class="form-control me-2 input-search js-search-input" type="search" placeholder="Пошук" />
 		</div>
-		<div class="col-md-6">
-			<h1 class="mb-3 js-product-title">Назва товару</h1>
-			<div class="rating-wrap">
-				<span class="js-product-rating">4.9</span>
-				<a href="#" class="">1580</a>
-				<p class="lead mb-4 fw-bold">Опис товару</p>
-				<p class="perex-for-desktop js-product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, repellat!</p>
-				<div class="article fw-bold">
-					Артикул:
-					<span>122890</span>
-				</div>
-				<p class="h2 text-danger mb-4">
-					Ціна:
-					<span class="js-product-price"></span>
-					<span class="h2 text-danger mb-4">дол</span>
-				</p>
-				<div class="js-product-order-btn">
-					<button class="btn btn-primary btn-lg">Додати в корзину</button>
-				</div>
+		<div class="search__list catalog">
+			<div class="catalog__list js-search-list">
+				<p class="no-result">Результатів не знайдено</p>
 			</div>
 		</div>
 	</div>
-	<div class="depiction">
-		<h1 class="depiction-title fw-bold">Опис</h1>
-		<p class="depiction-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti maxime eligendi fuga odio laudantium aperiam architecto deserunt suscipit distinctio! Atque itaque blanditiis quis vel nemo numquam quibusdam alias necessitatibus fugiat.</p>
-	</div>
-	<div class="cart">
+</div>
+
+<div class="cart">
     <ul class="cart-list-products js-cart-list hide">
         
     </ul>
@@ -150,7 +123,7 @@
 </div>
  <script>
 	const param = {
-		page: 'product'
+		page: 'catalog'
 	}
 
 
@@ -170,4 +143,3 @@
 </body>
 
 </html>
-</div>

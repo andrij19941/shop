@@ -14,85 +14,201 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body class="@@bodyClass">
-
-
-
-	<div class="menu bg-body-secondary bg-gradient">
+<body class="@@bodyClass"> <div class="menu bg-body-secondary bg-gradient">
 	<div class="container">
 		<header class="d-flex justify-content-center py-3">
 			<ul class="nav nav-pills">
 				<li class="nav-item"><a href="index.html" class="nav-link">Авторизація</a></li>
-				<li class="nav-item"><a href="catalog.html" class="nav-link active">Каталог</a></li>
-				<li class="nav-item"><a href="product.html" class="nav-link">Перегляд товару</a></li>
-				<li class="nav-item"><a href="checkout.html" class="nav-link">Оформлення замовлення</a></li>
-				<li class="nav-item"><a href="contacts.html" class="nav-link">Контакти</a></li>
+				<li class="nav-item"><a href="catalog.html" class="nav-link ">Каталог</a></li>
+				<li class="nav-item"><a href="product.html?id=1" class="nav-link ">Перегляд товару</a></li>
+				<li class="nav-item"><a href="checkout.html" class="nav-link ">Оформлення замовлення</a></li>
+				<li class="nav-item"><a href="contacts.html" class="nav-link ">Контакти</a></li>
+				<li class="nav-item"><a href="search.html" class="nav-link ">Пошук</a></li>
 			</ul>
 		</header>
 	</div>
 </div>
-	
-	<div class="container">
-		
-		<nav class="menu">
-			<a href="index.html">Головна</a>
-			<a href="checkout.html">Оформлення замовлення</a>
-		</nav>
-
-		<h1>Оформлення замовлення</h1>
-
-		<form class="send-form hide-send call-form" method="post">
-	        
-	        <div class="form-group form-group-v18">
-	            <input type="text" class="form-control" id="input-name" placeholder="Введіть ім'я">
-	        </div>
-	        
-	        <div class="form-group form-group-v18">
-	            <input type="email" class="form-control" id="input-email" placeholder="Введіть email">
-	        </div>
-	    	
-	    	<h4>Оформлені замовлення: <span class="summ-products">0</span></h4>
-	        <div class="list-order-products js-list-order-products">
-	        	
-	        	<div class="card-order-product">
-	        		<img src="img/1.jpg" alt="" class="card-order-product__img">
-	        		<h4 class="card-order-product__title">Назва товару</h4>
-	        		<p class="card-order-product__price">
-	        			<span class="card-order-product__price-label">Ціна:</span>
-	        			<span class="card-order-product__price-value">300 грн.</span>
-	        		</p>
-	        	</div>
-
-	        </div>
 
 
+<div class="container">
+	<nav class="menu">
+		<a href="index.html">Головна</a>
+		<a href="checkout.html">Оформлення замовлення</a>
+	</nav>
 
+	<h1>Корзина</h1>
+	<div class="container-fluid d-flex">
+		<div class="shopping-cart">
+			<div class="column-labels">
+				<label class="product-image">Фотографія</label>
+				<label class="product-details">Продукт</label>
+				<label class="product-price">Ціна</label>
+				<label class="product-quantity">Кількість</label>
+				<label class="product-removal">Remove</label>
+				<label class="product-line-price">Загалом</label>
+			</div>
 
+			<div class="product">
+				<div class="product-image">
+					<img src="https://s.cdpn.io/3/dingo-dog-bones.jpg" />
+				</div>
+				<div class="product-details">
+					<div class="product-title">Dingo Dog Bones</div>
+					<p class="product-description">The best dog bones of all time. Holy crap. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.</p>
+				</div>
+				<div class="product-price">12.99</div>
+				<div class="product-quantity">
+					<input type="number" value="2" min="1" />
+				</div>
+				<div class="product-removal">
+					<button class="remove-product btn-primary">Видалити</button>
+				</div>
+				<div class="product-line-price">25.98</div>
+			</div>
 
-	        <button class="btn btn-primary" type="submit">
-	            <span>Оформити замовлення</span>
-	        </button>
-	    </form>
+			<div class="product">
+				<div class="product-image">
+					<img src="https://s.cdpn.io/3/large-NutroNaturalChoiceAdultLambMealandRiceDryDogFood.png" />
+				</div>
+				<div class="product-details">
+					<div class="product-title">Nutro™ Adult Lamb and Rice Dog Food</div>
+					<p class="product-description">Who doesn't like lamb and rice? We've all hit the halal cart at 3am while quasi-blackout after a night of binge drinking in Manhattan. Now it's your dog's turn!</p>
+				</div>
+				<div class="product-price">45.99</div>
+				<div class="product-quantity">
+					<input type="number" value="1" min="1" />
+				</div>
+				<div class="product-removal">
+					<button class="remove-product">Видалити</button>
+				</div>
+				<div class="product-line-price">45.99</div>
+			</div>
 
+			<div class="totals">
+				<div class="totals-item">
+					<label>Ціна товару</label>
+					<div class="totals-value" id="cart-subtotal">71.97</div>
+				</div>
+				<div class="totals-item">
+					<label>Податок (20%)</label>
+					<div class="totals-value" id="cart-tax">3.60</div>
+				</div>
+				<div class="totals-item">
+					<label>Доставка</label>
+					<div class="totals-value" id="cart-shipping">15.00</div>
+				</div>
+				<div class="totals-item totals-item-total">
+					<label>Загалом</label>
+					<div class="totals-value" id="cart-total">90.57</div>
+				</div>
+			</div>
 
-
-
-
-		<div class="cart">
-			<ul class="cart-list-products js-cart-list hide">
-				
-			</ul>
-			
-			<div class="btn-show-cart btn-222 js-show-cart ">
-				<div class="js-cart-summ">0</div>
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+			<button class="checkout">Замовити</button>
+		</div>
+		<div class="my-form">
+			<h1>Оформлення заказу</h1>
+			<div class="my2">
+				<form action="" method="post" class="form-check d-flex flex-wrap">
+					<input type="text" name="first_name" placeholder="ПІП" class="form-place" />
+					<input type="email" name="email" placeholder="Email" class="form-place"/>
+					<input type="tel" name="number" placeholder="Номер телефону" class="form-place"/>
+					<input type="text" name="adress" placeholder="Адреса доставки" class="form-place"/>
+					<input type="text" name="comentar" placeholder="Коментар" class="form-place form-heige"/>
+				</form>
 			</div>
 		</div>
 	</div>
+	
+		<div class="container">
+	<footer class="py-5">
+		<div class="row">
+			<div class="col-6 col-md-2 mb-3">
+				<h5 class="fs-2 text fw-bold">Про компанію</h5>
+				<ul class="nav flex-column">
+					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary text-primary nav-color-text">Про нас</a></li>
+					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary text-primary">Умови використання сайту</a></li>
+					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary text-primary">Вакансії</a></li>
+					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary text-primary">Вакансії</a></li>
+					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary text-primary">Контакти</a></li>
+					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary text-primary">Усі категорії</a></li>
+				</ul>
+			</div>
+
+			<div class="col-6 col-md-2 mb-3">
+				<h5 class="fs-2 text fw-bold">Допомога</h5>
+				<ul class="nav flex-column">
+					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Доставка та оплата</a></li>
+					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Кредит</a></li>
+					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Гарантія</a></li>
+					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Повернення товару</a></li>
+					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Сервісні центри</a></li>
+				</ul>
+			</div>
+
+			<div class="col-6 col-md-2 mb-3">
+				<h5 class="fs-2 textfw-bold fw-bold">Партнерам</h5>
+				<ul class="nav flex-column">
+					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Продавати у нас</a></li>
+					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Співпраця з нами</a></li>
+					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Франчайзинг</a></li>
+					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Оренда приміщень</a></li>
+				</ul>
+			</div>
+
+			<div class="col-md-5 offset-md-1 mb-3">
+				<form>
+					<h5>Приєднайся та отримуй наші новини</h5>
+					<div class="d-flex flex-column flex-sm-row w-100 gap-2">
+						<label for="newsletter1" class="visually-hidden">Email address</label>
+						<input id="newsletter1" type="text" class="form-control" placeholder="Email address" />
+						<button class="btn btn-primary" type="button">Приєднатись</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+			<p>&copy; 2023 Company, Inc. All rights reserved.</p>
+			<ul class="list-unstyled d-flex">
+				<li class="ms-3">
+					<a class="link-body-emphasis" href="#">
+						<svg class="bi" width="24" height="24"><use xlink:href="#twitter" /></svg>
+					</a>
+				</li>
+				<li class="ms-3">
+					<a class="link-body-emphasis" href="#">
+						<svg class="bi" width="24" height="24"><use xlink:href="#instagram" /></svg>
+					</a>
+				</li>
+				<li class="ms-3">
+					<a class="link-body-emphasis" href="#">
+						<svg class="bi" width="24" height="24"><use xlink:href="#facebook" /></svg>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+</div>
+ <script>
+	const param = {
+		page: 'catalog'
+	}
 
 
-
-		<script src="js/all-min.js"></script>
+</script>	
+	
+	
+	
+	<!-- /<script src="js/all-min.js"></script> -->
+	<script src="../libs/jquery/jquery.min.js"></script>
+	<script src="../libs/boostrap/bootstrap.bundle.min.js"></script>
+	<script src="../js/catalog.js"></script>
+	<script src="../js/product.js"></script>
+	<script src="../js/cart.js"></script>
+	<script src="../js/checkout.js"></script>
+	<script src="../js/search.js"></script>
+	<script src="../js/sendForm.js"></script>
 </body>
 
 </html>
+	</div>
+</div>

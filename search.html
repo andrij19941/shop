@@ -1,0 +1,17 @@
+@@include('blocks/system--head.html', { 'title': 'Search page', 'bodyClass': 'page-search' }) @@include('blocks/block--menu.html', { 'activePage': 'search'})
+
+<div class="search">
+	<div class="container">
+		<h1 class="search__title mt-3 mb-3">Пошук товарів</h1>
+		<div class="d-flex" role="search">
+			<input name="query" class="form-control me-2 input-search js-search-input" type="search" placeholder="Пошук" />
+		</div>
+		<div class="search__list catalog">
+			<div class="catalog__list js-search-list">
+				<p class="no-result">Результатів не знайдено</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+@@include('blocks/cart--list.html') @@include('blocks/block--footer.html') @@include('blocks/system--footer.html', { page: 'catalog' })

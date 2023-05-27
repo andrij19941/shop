@@ -56,25 +56,25 @@ function viewProducts()
 		$('.js-cart-summ').html(cartCount);
 		
 		// Виводимо добавлені товари
-		$.each(cart, function(index, product) {
-			
+		$.each(cart, function(index, {id, title, price, count, img}) {
+
 			// Наповнюємо змінну товарами
 			listProducts += `<li class="cart-product">
 								<div class="cart-product__img-wrap">
-									<img src="img/${product.img}" alt="" class="cart-product__img">
+									<img src="${img}" alt="" class="cart-product__img">
 								</div>
-								<h3 class="cart-product__title">${product.title}</h3>
-								<p class="cart-product__price">${product.price}</p>
+								<h3 class="cart-product__title">${title}</h3>
+								<p class="cart-product__price">${price}</p>
 								<div class="button-count">
-							        <button class="button-count__btn button-count__btn-count js-btn-count" data-for="#input-count-${index}" data-type="minus">-</button>
-							        <input type="text" value="1" class="button-count__input" id="input-count-${index}"/>
-							        <button class="button-count__btn button-count__btn-count js-btn-count" data-for="#input-count-${index}" data-type="plus">+</button>
+							        <button class="button-count__btn button-count__btn-count js-btn-count" data-for="#input-count-${id}" data-type="minus">-</button>
+							        <input type="text" value="${count}" class="button-count__input" id="input-count-${id}"/>
+							        <button class="button-count__btn button-count__btn-count js-btn-count" data-for="#input-count-${id}" data-type="plus">+</button>
     							</div>
 								<div class="btn btn-remove js-remove-product" data-index="${index}">x</div>
 							</li>`;
 
 		});
-
+		
 		// Добавляємо кнопку оформлення замовлення
 		listProducts += `<a href="checkout.html" class="btn-247 btn-order">Оформити замовлення</a>`;
 	}
@@ -225,3 +225,22 @@ $(document).on('click', '.js-btn-count', function()
 		}
 	}
 });
+
+// Фунція відповідає за карточку товарі
+const getProductCard = (id, title, description, price, thumbnail) => {
+	return `<div class="card-product radius-4-px">
+				<a href="product.html?id=${id}" class="img-hold">
+					<img class="img" alt="" src="${thumbnail}">
+				</a>
+				<a href="product.html?id=${id}" class="title">${title}</a>
+				<p class="info-text">${description}</p>
+				<p class="price"><span class="big font-bold">${price}</span> дол</span></p>
+				<div class="btn btn-primary w-100 js-add-product"
+					data-id="${id}"
+					data-title="${title}"
+					data-price="${price}"
+					data-img="${thumbnail}"
+					data-count="1">Замовити</div>
+			</div>`
+}
+

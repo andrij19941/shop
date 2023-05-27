@@ -1,67 +1,94 @@
-@@include('blocks/system--head.html')
+@@include('blocks/system--head.html') @@include('blocks/block--menu.html')
 
+<div class="container">
+	<nav class="menu">
+		<a href="index.html">Головна</a>
+		<a href="checkout.html">Оформлення замовлення</a>
+	</nav>
 
+	<h1>Корзина</h1>
+	<div class="container-fluid d-flex">
+		<div class="shopping-cart">
+			<div class="column-labels">
+				<label class="product-image">Фотографія</label>
+				<label class="product-details">Продукт</label>
+				<label class="product-price">Ціна</label>
+				<label class="product-quantity">Кількість</label>
+				<label class="product-removal">Remove</label>
+				<label class="product-line-price">Загалом</label>
+			</div>
 
-	@@include('blocks/block--menu.html')
-	
-	<div class="container">
-		
-		<nav class="menu">
-			<a href="index.html">Головна</a>
-			<a href="checkout.html">Оформлення замовлення</a>
-		</nav>
+			<div class="product">
+				<div class="product-image">
+					<img src="https://s.cdpn.io/3/dingo-dog-bones.jpg" />
+				</div>
+				<div class="product-details">
+					<div class="product-title">Dingo Dog Bones</div>
+					<p class="product-description">The best dog bones of all time. Holy crap. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.</p>
+				</div>
+				<div class="product-price">12.99</div>
+				<div class="product-quantity">
+					<input type="number" value="2" min="1" />
+				</div>
+				<div class="product-removal">
+					<button class="remove-product btn-primary">Видалити</button>
+				</div>
+				<div class="product-line-price">25.98</div>
+			</div>
 
-		<h1>Оформлення замовлення</h1>
+			<div class="product">
+				<div class="product-image">
+					<img src="https://s.cdpn.io/3/large-NutroNaturalChoiceAdultLambMealandRiceDryDogFood.png" />
+				</div>
+				<div class="product-details">
+					<div class="product-title">Nutro™ Adult Lamb and Rice Dog Food</div>
+					<p class="product-description">Who doesn't like lamb and rice? We've all hit the halal cart at 3am while quasi-blackout after a night of binge drinking in Manhattan. Now it's your dog's turn!</p>
+				</div>
+				<div class="product-price">45.99</div>
+				<div class="product-quantity">
+					<input type="number" value="1" min="1" />
+				</div>
+				<div class="product-removal">
+					<button class="remove-product">Видалити</button>
+				</div>
+				<div class="product-line-price">45.99</div>
+			</div>
 
-		<form class="send-form hide-send call-form" method="post">
-	        
-	        <div class="form-group form-group-v18">
-	            <input type="text" class="form-control" id="input-name" placeholder="Введіть ім'я">
-	        </div>
-	        
-	        <div class="form-group form-group-v18">
-	            <input type="email" class="form-control" id="input-email" placeholder="Введіть email">
-	        </div>
-	    	
-	    	<h4>Оформлені замовлення: <span class="summ-products">0</span></h4>
-	        <div class="list-order-products js-list-order-products">
-	        	
-	        	<div class="card-order-product">
-	        		<img src="img/1.jpg" alt="" class="card-order-product__img">
-	        		<h4 class="card-order-product__title">Назва товару</h4>
-	        		<p class="card-order-product__price">
-	        			<span class="card-order-product__price-label">Ціна:</span>
-	        			<span class="card-order-product__price-value">300 грн.</span>
-	        		</p>
-	        	</div>
+			<div class="totals">
+				<div class="totals-item">
+					<label>Ціна товару</label>
+					<div class="totals-value" id="cart-subtotal">71.97</div>
+				</div>
+				<div class="totals-item">
+					<label>Податок (20%)</label>
+					<div class="totals-value" id="cart-tax">3.60</div>
+				</div>
+				<div class="totals-item">
+					<label>Доставка</label>
+					<div class="totals-value" id="cart-shipping">15.00</div>
+				</div>
+				<div class="totals-item totals-item-total">
+					<label>Загалом</label>
+					<div class="totals-value" id="cart-total">90.57</div>
+				</div>
+			</div>
 
-	        </div>
-
-
-
-
-
-	        <button class="btn btn-primary" type="submit">
-	            <span>Оформити замовлення</span>
-	        </button>
-	    </form>
-
-
-
-
-
-		<div class="cart">
-			<ul class="cart-list-products js-cart-list hide">
-				
-			</ul>
-			
-			<div class="btn-show-cart btn-222 js-show-cart ">
-				<div class="js-cart-summ">0</div>
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+			<button class="checkout">Замовити</button>
+		</div>
+		<div class="my-form">
+			<h1>Оформлення заказу</h1>
+			<div class="my2">
+				<form action="" method="post" class="form-check d-flex flex-wrap">
+					<input type="text" name="first_name" placeholder="ПІП" class="form-place" />
+					<input type="email" name="email" placeholder="Email" class="form-place"/>
+					<input type="tel" name="number" placeholder="Номер телефону" class="form-place"/>
+					<input type="text" name="adress" placeholder="Адреса доставки" class="form-place"/>
+					<input type="text" name="comentar" placeholder="Коментар" class="form-place"/>
+				</form>
 			</div>
 		</div>
 	</div>
-
-
-
-	@@include('blocks/system--footer.html')
+	
+		@@include('blocks/block--footer.html') @@include('blocks/system--footer.html', { page: 'catalog' })
+	</div>
+</div>

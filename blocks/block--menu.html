@@ -3,10 +3,12 @@
 		<header class="d-flex justify-content-center py-3">
 			<ul class="nav nav-pills">
 				<li class="nav-item"><a href="index.html" class="nav-link">Авторизація</a></li>
-				<li class="nav-item"><a href="catalog.html" class="nav-link active">Каталог</a></li>
-				<li class="nav-item"><a href="product.html" class="nav-link">Перегляд товару</a></li>
-				<li class="nav-item"><a href="checkout.html" class="nav-link">Оформлення замовлення</a></li>
-				<li class="nav-item"><a href="contacts.html" class="nav-link">Контакти</a></li>
+				<li class="nav-item"><a href="catalog.html" class="nav-link @@if (context.activePage == 'catalog') { active }">Каталог</a></li>
+				<li class="nav-item"><a href="product.html?id=1" class="nav-link @@if (context.activePage == 'product') { active }">Перегляд товару</a></li>
+				<li class="nav-item"><a href="checkout.html" class="nav-link @@if (context.activePage == 'checkout') { active }">Оформлення замовлення</a></li>
+				<li class="nav-item"><a href="contacts.html" class="nav-link @@if (context.activePage == 'contacts') { active }">Контакти</a></li>
+				<li class="nav-item"><a href="search.html" class="nav-link @@if (context.activePage == 'search') { active }">Пошук</a></li>
+				<li class="nav-item"><a href="about.html" class="nav-link @@if (context.activePage == 'about') { active }">Про нас</a></li>
 			</ul>
 		</header>
 	</div>

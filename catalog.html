@@ -1,19 +1,10 @@
-@@include('blocks/system--head.html', {
-	'title': 'Catalog page',
-	'bodyClass': 'page-catalog'
-})
+@@include('blocks/system--head.html', { 'title': 'Catalog page', 'bodyClass': 'page-catalog' }) @@include('blocks/block--menu.html', { 'activePage': 'catalog'})
 
-	@@include('blocks/block--menu.html')
-
-	<div class="catalog">
-		<div class="container">
-			<h1 class="catalog__title">Каталог товарів</h1>
-			<div class="catalog__list js-catalog-list">
-
-			</div>
-		</div>
+<div class="catalog">
+	<div class="container">
+		<h1 class="catalog__title mt-3">Каталог товарів</h1>
+		<div class="catalog__list js-catalog-list"></div>
 	</div>
+</div>
 
-	@@include('blocks/cart--list.html')
-@@include('blocks/system--footer.html')
-
+@@include('blocks/cart--list.html') @@include('blocks/block--footer.html') @@include('blocks/system--footer.html', { page: 'catalog', needFooter: false })

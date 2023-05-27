@@ -243,9 +243,36 @@ label {
 }
 .form-check {
     gap:20px;
+<<<<<<< HEAD
 }
 .form-place {
     height: 50px;
     width: 260px;
     border-radius: 10px;
 }
+=======
+    margin: 2px;
+    padding: 10px;
+}
+.form-place {
+    min-height: 50px;
+    min-width: 260px;
+    border-radius: 10px;
+    background-color: #e8e8f6;
+    border: solid 0.4px #514a94;
+}
+.form-heige {
+  min-height: 100px;
+ 
+}
+.my2 {
+  border: solid 1px #a5abac;
+    border-radius: 10px;
+    background-color: #faf7f3;
+}
+
+.form-place:hover {
+  background-color: #eee;
+  border-color: rgb(112, 105, 105);
+}
+>>>>>>> c711c777f8f3db6688bd190c9292551dcd0d2485
